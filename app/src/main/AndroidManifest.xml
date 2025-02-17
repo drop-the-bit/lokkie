@@ -29,7 +29,5 @@
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-9515252544582305~1056157298"/>
     </application>
-    <uses-permission android:name="android.permission.INTERNET"
-        tools:ignore="ManifestOrder" />
-
+    <uses-permission android:name="android.permission.INTERNET" tools:ignore="ManifestOrder" />
 </manifest>

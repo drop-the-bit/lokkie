@@ -4,22 +4,10 @@ import android.annotation.SuppressLint
 import android.webkit.WebResourceRequest
 import android.webkit.WebView
 import android.webkit.WebViewClient
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.unit.dp
 import androidx.compose.ui.viewinterop.AndroidView
 
-@Composable
-fun WebAndNativeView() {
-    Column(modifier = Modifier.fillMaxSize()) {
-        WebViewScreen(url = "https://daum.net", modifier = Modifier.weight(1f)) // 웹뷰 영역
-        NativeAdScreen(modifier = Modifier.fillMaxWidth().height(100.dp)) // 광고 영역
-    }
-}
 
 @Composable
 @SuppressLint("SetJavaScriptEnabled")
