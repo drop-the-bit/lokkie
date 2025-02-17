@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import com.lokkie.ui.screen.WebAndNativeView
 import com.lokkie.ui.theme.LokkieTheme
 
 class MainActivity : ComponentActivity() {

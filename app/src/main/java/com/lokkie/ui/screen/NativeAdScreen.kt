@@ -1,4 +1,4 @@
-package com.lokkie
+package com.lokkie.ui.screen
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box

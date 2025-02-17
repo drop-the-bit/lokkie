@@ -1,4 +1,4 @@
-package com.lokkie
+package com.lokkie.ui.screen
 
 import android.annotation.SuppressLint
 import android.webkit.WebResourceRequest
