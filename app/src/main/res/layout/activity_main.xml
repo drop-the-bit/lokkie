@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:ads="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,30 +8,13 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-<!--    <androidx.fragment.app.FragmentContainerView-->
-<!--        android:id="@+id/fragment_container_view_tag"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="0dp"-->
-<!--        android:layout_weight="1"-->
-<!--        android:name="com.lokkie.yrapp.BlankFragment"/>-->
-    <androidx.constraintlayout.widget.ConstraintLayout
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/frameLayout"
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainerView"
+        android:name="com.lokkie.yrapp.BlankFragment"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        tools:context=".BlankFragment"
-        android:name="com.lokkie.yrapp.BlankFragment"
-        >
-        <WebView
-            android:id="@+id/webview"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_weight="1"/>
+
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
