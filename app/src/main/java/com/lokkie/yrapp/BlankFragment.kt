@@ -8,23 +8,21 @@ import android.webkit.WebChromeClient
 import android.webkit.WebView
 import android.webkit.WebViewClient
 import androidx.fragment.app.Fragment
+import com.lokkie.yrapp.databinding.FragmentBlankBinding
 
 
 
-class BlankFragment : Fragment() {
+class BlankFragment : Fragment(R.layout.fragment_blank) {
+    private var _binding: FragmentBlankBinding? = null
+    private val binding get() = _binding!!
 
     override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
+        inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        val view = inflater.inflate(R.layout.fragment_blank, container, false)
-
-
-        val myWebView: WebView = view.findViewById(R.id.webview)
-
+    ): View {
+        _binding = FragmentBlankBinding.inflate(inflater, container, false)
+        val myWebView: WebView = binding.webview
         myWebView.settings.run {
-            // 웹뷰 자바스크립트 허용
             javaScriptEnabled = true
             javaScriptCanOpenWindowsAutomatically = true
             setSupportMultipleWindows(true)
@@ -32,9 +30,11 @@ class BlankFragment : Fragment() {
         myWebView.webViewClient = WebViewClient()
         myWebView.webChromeClient = WebChromeClient()
         myWebView.loadUrl("https://www.google.com")
-        return view
+        return binding.root
     }
 
-
-
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
 }
