@@ -10,7 +10,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import com.google.android.gms.ads.MobileAds
-import com.lokkie.ui.screen.AdmobBanner
+import com.lokkie.ui.screen.AdmobBannerScreen
 import com.lokkie.ui.screen.WebViewScreen
 import com.lokkie.ui.theme.LokkieTheme
 
@@ -27,7 +27,8 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun MainView() {
     Column(modifier = Modifier.fillMaxSize()) {
+        val adUnitId = "ca-app-pub-3940256099942544/6300978111"
         WebViewScreen(url = "https://daum.net", modifier = Modifier.weight(1f)) // 웹뷰
-        AdmobBanner(modifier = Modifier.fillMaxWidth())
+        AdmobBannerScreen(modifier = Modifier.fillMaxWidth(), adUnitId)
     }
 }
