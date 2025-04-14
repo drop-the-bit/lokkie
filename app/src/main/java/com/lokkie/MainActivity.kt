@@ -28,7 +28,11 @@ class MainActivity : ComponentActivity() {
 fun MainView() {
     Column(modifier = Modifier.fillMaxSize()) {
         val adUnitId = "ca-app-pub-3940256099942544/6300978111"
-        WebViewScreen(url = "https://daum.net", modifier = Modifier.weight(1f)) // 웹뷰
+        WebViewScreen(
+            url = "https://drop-the-bit.github.io/venus/",
+            modifier = Modifier
+                .weight(1f)
+        )
         AdmobBannerScreen(modifier = Modifier.fillMaxWidth(), adUnitId)
     }
 }
